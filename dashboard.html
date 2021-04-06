@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Dashboard page</title>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+     <script src="firebase.js"></script>
+     <script src="app.js"></script>
+     <script>
+     firebase.auth().onAuthStateChanged(function(user) {
+  	if (user) {
+    // User is signed in.
+    // console.log(user.email + ' is signed in')
+ 	} else {
+ 		window.location.href="admin.html"
+  	}
+	});
+	</script>
+     
+</head>
+<body>
+
+	<h1>Welcome to Admin Dashboard</h1>
+
+	<button onclick="signout()">Logout</button>
+
+	<p>
+	<button onclick="screenLock1()">Lock screen 1</button>
+	<button onclick="screenUnlock1(),updateDatabase()">Unlock screen 1</button>
+	<button onclick="screenLock2()">Lock screen 2</button>
+	<button onclick="screenUnlock2(),updateDatabase()">Unlock screen 2</button>
+	<button onclick="screenLock3()">Lock screen 3</button>
+	<button onclick="screenUnlock3(),updateDatabase()">Unlock screen 3</button>
+	</p>
+	<!-- <button onclick="updateDatabase()">Add count</button> -->
+
+	<div> Previous Morning Winner Number</div>
+	<p>
+	<form action="">
+		<input type="text" id="win" placeholder="Previous winner" name=""> 
+	</form>
+	<button onclick="winnerFind()">Submit</button>
+</p>
+
+<button onclick="window.location.href='newpassword.html'">Change your password</button>
+
+
+</body>
+</html>

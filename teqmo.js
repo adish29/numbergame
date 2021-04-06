@@ -35,3 +35,14 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
     
 }
 
+function signoutTeqmo()
+
+{
+    firebase.auth().signOut().then(() => {
+    console.log('User signed out')
+   // window.location.href='home.html'
+    }).catch((error) => {
+    console.log('error signing out')
+    });
+
+}

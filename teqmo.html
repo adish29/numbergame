@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teqmo Admin Dashboard</title>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+     <script src="firebase.js"></script>
+     <script src="app.js"></script>
+     <script src="teqmo.js"></script>
+
+</head>
+<body>
+
+	<h1>Teqmo Admin Dashboard</h1>
+	<form>  
+  
+<label> OwnerName: </label>         
+<input type="text" id="own" name="OwnerName" size="15"/> <br> <br>  
+<label> StoreName: </label>     
+<input type="text" id="stn" name="StoreName" size="15"/> <br> <br>  
+<label> CompanyName: </label>         
+<input type="text" id="con" name="CompanyName" size="15"/> <br> <br>  
+Address  
+<br>  
+<textarea cols="80" rows="5" value="address">  
+</textarea>  
+<br> <br>  
+<label> State: </label>         
+<input type="text" id="state" name="State" size="15"/> <br> <br> 
+<label> ZipCode: </label>         
+<input type="text" id="zc" name="ZipCode" size="15"/> <br> <br> 
+  
+<label>   
+Phone :  
+</label>  
+<!-- <input type="text" name="country code" maxlength="3" size="2" />   
+ --><input type="text" id="phn" name="phone" maxlength="10"/> <br> <br>  
+
+Email:  
+<input type="email" id="shopemail" name="email"/> <br>    
+<br> <br>  
+Password:  
+<input type="Password" id="shoppass" name="pass"> <br>   
+<br> <br>  
+</form>  
+<button onclick="signUp()">SignUp</button>
+
+</body>
+</html>

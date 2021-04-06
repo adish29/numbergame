@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Display</title>
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+     <script src="firebase.js"></script>
+     <script src="app1.js"></script>
+     <script>
+     firebase.auth().onAuthStateChanged(function(user) {
+  	if (user) {
+    // open current page
+ 	} else {
+ 		window.location.href="gamelogin.html"
+  	}
+	});
+	</script>
+	<script>
+	var ref = database.ref('Teqmo/'+'Numbers/'+'2021(year)/'+'4(month)/'+
+    '1(date)/'+'Morning/'+'mmR5Ye3XJEPefrYVlrQJPvhQByy1/'+'player1');
+    ref.on('value', (snapshot) => {
+
+    console.log(snapshot)
+    const data = snapshot.val();
+    document.getElementById("arr").innerHTML = data;
+	});
+	</script>
+</head>
+<body>
+	<h1>Following numbers have maximum winning chance</h1>
+
+	<p id="arr"></p>
+
+	<script>
+	var timecount = 6;
+	var redirect = "playgame.html";
+ 
+	function countDown(){
+    var timer = document.getElementById("timer");
+    if(timecount > 0){
+        timecount--;
+        timer.innerHTML = "Game will end in "+timecount+" seconds.";
+        setTimeout("countDown()", 1000);
+    }else{
+        window.location.href = redirect;
+    }
+}
+</script>
+ 
+ 
+<span id="timer">
+<script>countDown();</script>
+<script>screenLock1();</script>
+</span>
+	<p>
+		<button onclick = "window.location.href = 'gamescreen1.html'">Back</button>
+	</p>
+
+
+
+</body>
+</html>

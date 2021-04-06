@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Play your Game</title>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+     <script src="firebase.js"></script>
+     <script src="app1.js"></script>
+     <script>
+     firebase.auth().onAuthStateChanged(function(user) {
+  	if (user) {
+    			var ref = database.ref('Teqmo/'+'Stores/'+'mmR5Ye3XJEPefrYVlrQJPvhQByy1'+'/screen1/'+'/lock');
+   				 ref.on('value', (snapshot) => {
+
+  				  console.log(snapshot)
+  				  const data = snapshot.val();
+   				  console.log(data)
+   				  if(data == '0')
+   				  {
+   				  		console.log('You can play now')
+   				  }
+   				  else{
+   				  	alert("Pay shopowner 1$ in order to play")
+   				  	window.location.href="playgame.html"
+   				  }
+			});
+
+ 	} else {
+ 		window.location.href="gamelogin.html"
+  	}
+	});
+	</script>
+</head>
+<body>
+		<h1>Player input numbers screen</h1>
+		<form action="">
+			<input type="text" id="no" name="" placeholder="enter last winning number" maxlength="3">
+		</form>
+		<!-- <button onclick="numberFind()">Show Numbers</button> -->
+		<button onclick="window.location.href = 'shownumber.html'">Show Numbers</button>
+		<p>
+		<button onclick = "window.location.href = 'playgame.html'">Back</button>
+		</p>
+</body>
+</html>

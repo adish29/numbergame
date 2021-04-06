@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assign Machines</title>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+     <script src="firebase.js"></script>
+     <script src="app1.js"></script>
+     <script>
+     firebase.auth().onAuthStateChanged(function(user) {
+  	if (user) {
+    // open current page
+ 	} else {
+ 		window.location.href="gamelogin.html"
+  	}
+	});
+	</script>
+</head>
+<body>
+
+	<h1>Game Screen initial setup</h1>
+
+	<p>
+	<button onclick="screenLogin1()">Log into screen 1</button>
+	<button onclick="screenLogout1()">Log out of screen 1</button>
+	<button onclick="screenLogin2()">Log into screen 2</button>
+	<button onclick="screenLogout2()">Log out of screen 2</button>
+	<button onclick="screenLogin3()">Log into screen 3</button>
+	<button onclick="screenLogout3()">Log out of screen 3</button>
+	</p>
+	<p>
+		<button onclick = "window.location.href = 'playgame.html'">Go to game screen</button>
+	</p>
+	<button onclick="signout()">Logout</button>
+
+
+
+
+
+
+</body>
+</html>

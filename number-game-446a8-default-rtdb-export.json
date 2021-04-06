@@ -1,0 +1,52 @@
+{
+  "Teqmo" : {
+    "Numbers" : {
+      "2021(year)" : {
+        "4(month)" : {
+          "1(date)" : {
+            "Evening" : {
+              "kUU7OzxUBnVmmenMSlwfnOtpMrY2" : {
+                "player1" : "1,2,3,4,5",
+                "player2" : "6,7,8,9,10"
+              },
+              "mmR5Ye3XJEPefrYVlrQJPvhQByy1" : {
+                "player1" : "6,7,8,9,10",
+                "player2" : "1,2,3,4,5"
+              }
+            },
+            "Morning" : {
+              "kUU7OzxUBnVmmenMSlwfnOtpMrY2" : {
+                "player 2" : "6,7,8,9,0",
+                "player1" : "1,2,3,4,5"
+              },
+              "mmR5Ye3XJEPefrYVlrQJPvhQByy1" : {
+                "player1" : "1,2,3,4,5",
+                "player2" : "6,7,8,9,10"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Stores" : {
+      "mmR5Ye3XJEPefrYVlrQJPvhQByy1" : {
+        "Count" : {
+          "date1" : 5,
+          "date2" : 6
+        },
+        "screen1" : {
+          "lock" : 1,
+          "log" : 0
+        },
+        "screen2" : {
+          "lock" : 1,
+          "log" : 0
+        },
+        "screen3" : {
+          "lock" : 1,
+          "log" : 0
+        }
+      }
+    }
+  }
+}

@@ -137,3 +137,31 @@ function screenLock1()
   updates['Teqmo/' + 'Stores/' + 'mmR5Ye3XJEPefrYVlrQJPvhQByy1' + '/screen1/' + 'lock'] = '1';
   return firebase.database().ref().update(updates);
 }
+
+
+function startGame()
+{
+   firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+          var ref = database.ref('Teqmo/'+'Stores/'+'mmR5Ye3XJEPefrYVlrQJPvhQByy1'+'/screen1/'+'/lock');
+           ref.on('value', (snapshot) => {
+
+            console.log(snapshot)
+            const data = snapshot.val();
+            console.log(data)
+            if(data == '0')
+            {
+                console.log('You can play now')
+                window.location.href= 'gamescreen1.html'
+            }
+            else{
+              alert("Pay shopowner 1$ in order to play")
+              location.reload();
+            }
+      });
+
+  } else {
+    window.location.href="gamelogin.html"
+    }
+  });
+}

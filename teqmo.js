@@ -57,7 +57,14 @@ function login()
     var user = userCredential.user;
     console.log(user.uid)
     // readUserData(user.uid)   
-    window.location.href="teqmo.html"
+     if(user.uid == 'BLCsrrtP37OrggMGW2lCL0mUhIj2')
+                    {
+                        window.location.href="teqmo.html"
+                    }
+                    else{
+                        alert('You are not an authorized user')
+                        window.location.href="teqmologin.html" 
+                    }
 
 
     // ...

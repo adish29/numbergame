@@ -15,8 +15,14 @@
      <script>
      firebase.auth().onAuthStateChanged(function(user) {
      if (user) {
-    // User is signed in.
-    // console.log(user.email + ' is signed in')
+                    if(user.uid == 'BLCsrrtP37OrggMGW2lCL0mUhIj2')
+                    {
+
+                    }
+                    else{
+                        alert('You are not an authorized user')
+                        window.location.href="teqmologin.html" 
+                    }
      } else {
           window.location.href="teqmologin.html"
      }

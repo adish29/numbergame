@@ -12,6 +12,16 @@
      <script src="firebase.js"></script>
      <script src="app.js"></script>
      <script src="teqmo.js"></script>
+     <script>
+     firebase.auth().onAuthStateChanged(function(user) {
+     if (user) {
+    // User is signed in.
+    // console.log(user.email + ' is signed in')
+     } else {
+          window.location.href="teqmologin.html"
+     }
+     });
+     </script>
 
 </head>
 <body>

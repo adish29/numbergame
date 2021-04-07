@@ -8,5 +8,6 @@
     messagingSenderId: "1073849575497",
     appId: "1:1073849575497:web:29ea428cf46d991e8f3798"
   };
+  var secondaryApp = firebase.initializeApp(firebaseConfig, "Secondary");
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);

@@ -1,16 +1,10 @@
-
+var database = firebase.database();
 
 function signUp()
 {
 var email =  document.getElementById('shopemail').value;
 var password =  document.getElementById('shoppass').value;
-var ownername = document.getElementById('own').value;
-var storename = document.getElementById('stn').value;
-var companyname = document.getElementById('con').value;
-var state = document.getElementById('state').value;
-var zipcode = document.getElementById('zc').value;
-var phone = document.getElementById('phn').value;
-firebase.auth().createUserWithEmailAndPassword(email, password)
+secondaryApp.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in 
     var user = userCredential.user;
@@ -25,6 +19,8 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
     updates['Teqmo/' + 'Stores/' + user.uid + '/Phone'] = document.getElementById('phn').value;
     updates['Teqmo/' + 'Stores/' + user.uid + '/Count'] = '0';
     return firebase.database().ref().update(updates);
+
+    secondaryApp.auth().signOut();
   })
   .catch((error) => {
     var errorCode = error.code;
@@ -45,4 +41,30 @@ function signoutTeqmo()
     console.log('error signing out')
     });
 
+}
+
+
+
+function login()
+{
+
+    var email = document.getElementById('userteqmo').value;
+    var password = document.getElementById('passteqmo').value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    console.log(user.uid)
+    // readUserData(user.uid)   
+    window.location.href="teqmo.html"
+
+
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode, errorMessage)
+  });
 }

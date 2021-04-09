@@ -1,0 +1,75 @@
+{
+  "Teqmo" : {
+    "Numbers" : {
+      "2021(year)" : {
+        "4(month)" : {
+          "1(date)" : {
+            "Evening" : {
+              "kUU7OzxUBnVmmenMSlwfnOtpMrY2" : {
+                "player1" : "1,2,3,4,5",
+                "player2" : "6,7,8,9,10"
+              },
+              "mmR5Ye3XJEPefrYVlrQJPvhQByy1" : {
+                "player1" : "6,7,8,9,10",
+                "player2" : "1,2,3,4,5"
+              }
+            },
+            "Morning" : {
+              "kUU7OzxUBnVmmenMSlwfnOtpMrY2" : {
+                "player 2" : "6,7,8,9,0",
+                "player1" : "1,2,3,4,5"
+              },
+              "mmR5Ye3XJEPefrYVlrQJPvhQByy1" : {
+                "player1" : "1,2,3,4,5",
+                "player2" : "6,7,8,9,10",
+                "player3" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "Stores" : {
+      "1r6JJ131XmXZpfwTPnK86f70eok2" : {
+        "CompanyName" : "test1ab",
+        "Count" : "0",
+        "OwnerName" : "test1",
+        "Phone" : "9876543210",
+        "State" : "teststate",
+        "StoreName" : "test1a",
+        "Zipcode" : "123456"
+      },
+      "mmR5Ye3XJEPefrYVlrQJPvhQByy1" : {
+        "Count" : {
+          "date1" : 45
+        },
+        "Payment" : {
+          "commission" : 0.4,
+          "sales" : 0,
+          "week1" : {
+            "bill details" : 0,
+            "bill status" : 0,
+            "counter" : [ 130, 270, 185, 113, 301, 176, 94 ]
+          }
+        },
+        "screen1" : {
+          "lock" : "1",
+          "log" : "1"
+        },
+        "screen2" : {
+          "lock" : "0",
+          "log" : "1"
+        },
+        "screen3" : {
+          "lock" : "0",
+          "log" : "1"
+        }
+      }
+    },
+    "Winners" : {
+      "Morning" : {
+        "mmR5Ye3XJEPefrYVlrQJPvhQByy1" : "4"
+      }
+    }
+  }
+}

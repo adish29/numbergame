@@ -79,21 +79,21 @@ function readUserData(uid)
 });
 }
 
-function incrementCount()
-{
-		firebase.auth().onAuthStateChanged(user => {
+// function incrementCount()
+// {
+// 		firebase.auth().onAuthStateChanged(user => {
 
-		// console.log(user.uid);
-		database.ref('Teqmo/' + 'Stores/' + user.uid + '/Count/').set({
-		date1: '9'
-		});
+// 		// console.log(user.uid);
+// 		database.ref('Teqmo/' + 'Stores/' + user.uid + '/Count/').set({
+// 		date1: '9'
+// 		});
 
-		})	
+// 		})	
 	    
 	
  
 	
-}
+// }
 
 function updateDatabase(){
   var ref = database.ref('Teqmo/' + 'Stores/' + 'mmR5Ye3XJEPefrYVlrQJPvhQByy1' + '/Count/' + 'date1');
